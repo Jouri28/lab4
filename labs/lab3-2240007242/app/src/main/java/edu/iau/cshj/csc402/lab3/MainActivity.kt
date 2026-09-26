@@ -7,10 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import edu.iau.cshj.csc402.lab3.ui.theme.CSC402Lab3t123Theme
 
 class MainActivity : ComponentActivity() {
@@ -19,32 +16,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CSC402Lab3t123Theme {
-                StudentCard(
-                    student = Student(
-                        name = "jouri abdalrazzaq",
-                        program = "Computer Science - Level 7",
-                        gpa = "4.62",
-                        email = "2240007242@iau.edu.sa",
-                        city = "Jubail, Eastern Province"
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    StudentCard(
+                        student = Student(
+                            name = "jouri alshurie",
+                            program = "Computer Science - Level 4",
+                            gpa = "4.62",
+                            email = "220001234@iau.edu.sa",
+                            city = "Jubail, Eastern Province"
+                        ),
+                        modifier = Modifier.padding(innerPadding)
                     )
-                )
+                }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CSC402Lab3t123Theme {
-        Greeting("Android")
     }
 }
