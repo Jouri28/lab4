@@ -24,4 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "CSC402  Lab3t1&2&3"
 include(":app")
+include(":app")
  

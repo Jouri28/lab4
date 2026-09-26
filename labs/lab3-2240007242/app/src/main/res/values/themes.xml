@@ -2,4 +2,6 @@
 <resources>
 
     <style name="Theme.CSC402Lab3t123" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.Lab3task4" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
